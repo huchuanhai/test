@@ -5,6 +5,7 @@
         "description": "All Hms restful api",
         "version": "1.0.0"
     },
+    "url" : "http://aaa.com",
     "basePath": "/",
     "schemes": [
         "http"
