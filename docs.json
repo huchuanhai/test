@@ -5,11 +5,9 @@
         "description": "All Hms restful api",
         "version": "1.0.0"
     },
-    "host": "",
     "basePath": "/",
     "schemes": [
-        "http",
-        "https"
+        "http"
     ],
     "paths": {
         "/common/region": {
