@@ -5,7 +5,7 @@
         "description": "All Hms restful api",
         "version": "1.0.0"
     },
-    "host" : "http://aaa.com",
+    "host" : "petstore.swagger.io",
     "basePath": "/",
     "schemes": [
         "http"
