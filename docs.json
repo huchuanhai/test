@@ -1,0 +1,134 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "This is service hms API",
+        "description": "All Hms restful api",
+        "version": "1.0.0"
+    },
+    "host": "",
+    "basePath": "/",
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "paths": {
+        "/common/region": {
+            "get": {
+                "tags": [
+                    "Common.Region"
+                ],
+                "summary": "get region list",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "sName",
+                        "in": "query",
+                        "description": "Region sName",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "sPinyin",
+                        "in": "query",
+                        "description": "Region sPinyin",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "iLevel",
+                        "in": "query",
+                        "description": "Region iAutoID",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "iParentID",
+                        "in": "query",
+                        "description": "Region iAutoID",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "iTypeID",
+                        "in": "query",
+                        "description": "Region iAutoID",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "\u6b63\u5e38\u54cd\u5e94",
+                        "schema": {
+                            "$ref": "#/definitions/region"
+                        }
+                    }
+                }
+            }
+        },
+        "/common/region/{id}": {
+            "get": {
+                "tags": [
+                    "Common.Region"
+                ],
+                "summary": "get region by id",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Region \u5bf9\u5e94 iAutoID",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "\u6b63\u5e38\u54cd\u5e94",
+                        "schema": {
+                            "$ref": "#/definitions/region"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "region": {
+            "title": "region object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "default": 0
+                },
+                "msg": {
+                    "type": "string",
+                    "default": "success"
+                },
+                "data": {
+                    "type": "object",
+                    "default": {
+                        "iAutoID": "2",
+                        "sName": "\u9759\u5b89",
+                        "sPinyin": "jingan",
+                        "iLevel": "1",
+                        "iParentID": "1",
+                        "sRelation": ",1,2",
+                        "iOrder": "15"
+                    }
+                }
+            },
+            "type": "object"
+        }
+    },
+    "tags": [
+        {
+            "name": "Common.Region",
+            "description": "Common Region Service"
+        }
+    ]
+}
